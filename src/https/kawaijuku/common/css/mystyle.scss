@@ -1,0 +1,390 @@
+//mixin
+@import "../../../../template_scss/mixin/_breakpoint.scss";
+
+body {
+  min-width: 980px;
+  @include sp {
+    min-width: 100%;
+  }
+}
+
+.txt {
+  line-height: 1.8;
+}
+
+.pc-view {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp-view {
+  display: none;
+  @include sp {
+    display: block;
+  }
+}
+
+.inner {
+  width: 980px;
+  @include sp {
+    width: 100%;
+  }
+  position: relative;
+  margin: 0 auto;
+}
+
+.wide {
+  width: auto;
+}
+
+.h-wrap {
+  position: relative;
+  @include sp {
+    border-top: 3px solid #192d51;
+  }
+}
+
+.wrap-header-banner {
+  border-top: 3px solid rgb(0, 117, 193);
+  border-bottom: 1px solid #ccc;
+  height: 27px;
+
+  img {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    z-index: 1;
+  }
+}
+
+.wrap-nav-header {
+  display: flex;
+  flex-direction: column;
+  @include sp {
+    display: none;
+    z-index: 20;
+    position: absolute;
+    width: 100%;
+    background-color: #192d51;
+    margin-top: 50px;
+  }
+
+  &.accordionActive {
+      display: block;
+  }
+}
+
+.wrap-menu-btn {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  .menu-btn {
+    width: 50px;
+    height: 50px;
+    background-color: #192d51;
+    padding: 5px;
+    position: relative;
+    display: block;
+    .bar {
+      position: absolute;
+      left: 11px;
+      display: inline-block;
+      width: 30px;
+      height: 2px;
+      background-color: #fff;
+      transition: all 0.2s;
+    }
+
+    .bar:nth-child(1) {
+      top: 14px;
+
+    }
+    .bar:nth-child(2) {
+      top: 22px;
+    }
+    .bar:nth-child(3) {
+      top: 30px;
+    }
+
+    &:active {
+      .bar:nth-child(1) {
+        transform: translateY(7px) rotate(-45deg);
+      }
+      .bar:nth-child(1) {
+        display: none;
+      }
+      .bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+        top: 20px;
+      }
+    }
+  }
+}
+
+.wrap-header-logo {
+  position: absolute;
+  top: 12px;
+  left: 0px;
+  z-index: 2;
+  .txt-logo {
+    font-size: 12px;
+    vertical-align: sub;
+    color: #333;
+  }
+  @include sp {
+    top: 4px;
+  }
+}
+
+.menu-01 {
+  align-items: center;
+  a {
+    color: #333;
+    padding: 0 20px;
+  }
+
+  @include pc {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    li:not(:last-of-type) {
+      border-right: .1rem solid #CCC;
+    }
+  }
+
+  @include sp {
+    display: block;
+    height: auto;
+    padding-top: 20px;
+    a {
+      color: #fff;
+      font-size: 18px;
+      padding: 20px 30px;
+      display: block;
+    }
+  }
+}
+
+a {
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+a.icon-window {
+  &:after {
+    content: url("../../about/image/window.png");
+    @include sp {
+      content: url("../../about/image/window_sp.png");
+    }
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    padding-left: 5px;
+  }
+}
+
+.nav-inner {
+  background-color: rgb(25, 45, 81);
+  width: 100%;
+  order: 1;
+}
+
+.nav-header {
+  margin: 0 auto;
+  width: 980px;
+  @include sp {
+    width: 100%;
+  }
+}
+
+.menu-02 {
+  a {
+    color: #fff;
+    font-size: 15px;
+    padding: 20px 18px;
+    display: block;
+  }
+
+  @include pc {
+    order: 2;
+    flex-direction: row;
+    display: flex;
+    li {
+      border-right: .1rem solid #CCC;
+    }
+    li:first-of-type{
+      border-left: .1rem solid #CCC;
+    }
+  }
+
+  @include sp {
+    li {
+      border-bottom: .1rem solid #CCC;
+    }
+    a {
+      font-size: 18px;
+      padding: 20px 30px;
+    }
+  }
+}
+
+.active-menu {
+  background-color: #fff;
+  color: rgb(25, 45, 81);
+  a {
+    color: rgb(25, 45, 81);
+  }
+}
+
+.search {
+  position: relative;
+  .input-search {
+    padding: 5px;
+    font-size: 16px;
+    @include sp {
+      background-color: #fff;
+      width: 100%;
+      height: 100%;
+    }
+    @include pc {
+      width: 170px;
+      height: 30px;
+    }
+  }
+
+  .btn-search {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    &:hover {
+      opacity: 0.7;
+    }
+    @include sp {
+      background-color: #fff;
+      top: 20px;
+      right: 30px;
+      height: 34px;
+    }
+    @include pc {
+
+    }
+  }
+
+  @include pc {
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+
+  @include sp {
+    width: auto;
+    padding: 20px 30px;
+  }
+}
+
+// main start
+
+.bread-crumbs {
+  background-color: rgb(239, 239, 239);
+  font-size: 12px;
+  padding: 14px 0;
+  ol {
+    display: flex;
+    flex: wrap;
+    li {
+      position: relative;
+      padding: 0px 10px;
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+
+    li:not(:first-of-type) {
+      padding-left: 20px;
+      &:before {
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        border-top: 1px solid #6a6a6a;
+        border-left: 1px solid #6a6a6a;
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
+        transition: -webkit-transform .2s;
+        transition: transform .2s;
+        transition: transform .2s, -webkit-transform .2s;
+        -webkit-transform: rotate(134.999deg);
+        transform: rotate(134.999deg);
+      }
+    }
+  }
+}
+
+h1.main-lead {
+  background: url("../../about/image/bg.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 290px;
+  img {
+    position: absolute;
+    z-index: 10;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  @include sp {
+    background: url("../../about/image/bg_sp.jpg") no-repeat;
+    background-size: 100% 360px;
+    // height: 360px;
+    margin-top:53px;
+  }
+
+}
+
+.txt-lead {
+  font-size: 16pt;
+  padding-top: 60px;
+  line-height: 1.8;
+  @include sp {
+    font-size: 28pt;
+  }
+}
+
+h2 p.txt-btn {
+  width: 336px;
+  background-color: #0066cc;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: normal;
+  padding: 20px 10px;
+  font-size: 18px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.roboto-font {
+  font-family: 'Roboto', sans-serif;
+}
+
+@include sp {
+  ul {
+    li {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

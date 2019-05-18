@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* sass */
+//----------------------------------
+// sass　インクルード設定
+//----------------------------------
+
+//mixin
+@import "../../../template_scss/mixin/_breakpoint.scss";
+
+//base
+@import "../../../template_scss/base/_setting.scss";
+@import "../../../template_scss/base/_universal.scss";

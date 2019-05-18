@@ -1,0 +1,135 @@
+@charset "UTF-8";
+/* sass */
+body, div, p,
+h1, h2, h3, h4, h5, h6,
+dl, dt, dd, ul, ol, li,
+table, caption, th, td,
+form, fieldset, input, textarea, select,
+pre, address, blockquote,
+embed, object,
+address, dfn,
+article, aside, canvas, figure, figcaption,
+footer, header, menu, nav, section, main,
+audio, video {
+  margin: 0px;
+  padding: 0px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+}
+
+html {
+  overflow-y: scroll;
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+html * {
+  -webkit-overflow-scrolling: touch;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  background: #fff;
+  line-height: 1;
+  font-size: 1.6rem;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+strong {
+  font-style: normal;
+  font-weight: bold;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th {
+  text-align: left;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+form {
+  font-weight: normal;
+}
+
+input, button, textarea, select {
+  font-family: "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  line-height: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  text-transform: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  cursor: pointer;
+}
+
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  body {
+    font-size: 1.4rem;
+  }
+}
